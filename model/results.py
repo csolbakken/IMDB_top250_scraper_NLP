@@ -23,8 +23,8 @@ def main():
 
         ax = sns.heatmap(cf_matrix, annot=True, cmap='Blues', fmt='g')
 
-        ax.set_title('Confusion Matrix\n');
-        ax.set_xlabel('\nPredicted Value')
+        ax.set_title('Confusion Matrix');
+        ax.set_xlabel('Predicted Value')
         ax.set_ylabel('True Value');
 
         ax.xaxis.set_ticklabels(['False','True'])
