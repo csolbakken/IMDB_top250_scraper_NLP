@@ -10,7 +10,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 
-
 import warnings
 import joblib
 
@@ -32,7 +31,7 @@ def main():
         return X_train, X_test, y_train, y_test
 
 
-    def gridsearch(X_train, X_test, y_train, y_test):
+    def gridsearch(X_train, y_train):
         pipe = Pipeline ([ ('tokenizer', TfidfVectorizer()),
                              ('classifier',  LogisticRegression(solver='liblinear'))
                           ] )
@@ -52,12 +51,15 @@ def main():
         return grid
     
     X_train, X_test, y_train, y_test = loading_preprocessing()
-    model = gridsearch(X_train, X_test, y_train, y_test)
+    model = gridsearch(X_train, y_train)
     
     ## Save the model
     joblib.dump(model, 'model/model.pkl')
 
-    
+    ## Save the testing set
+    X_test.to_csv("data/X_test.csv")
+    y_test.to_csv("data/y_test.csv")
+ 
 
 main()
         
