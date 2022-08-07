@@ -5,3 +5,7 @@ Using Requests, BeautifulSoup, RegEx and Pandas to extract movie data and user r
 
 ## Sentiment analysis
 Using scikit-learn's TF-IDF vectorizer to perform sentiment analysis on the scraped reviews. Hyperparameters tuned by cross validation with GridSearch. 
+
+## Results
+
+![Confuson Matrix](model/ConfusionMatrix.png "Confusion Matrix")
