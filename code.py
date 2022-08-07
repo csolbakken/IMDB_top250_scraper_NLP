@@ -97,12 +97,8 @@ def main():
     movie_data_df = get_movie_data(urls)
     review_df = get_reviews(urls)
     
-    movie_data_df.to_csv("movie_data2.csv")
-    review_df.to_csv("reviews_data2")
+    movie_data_df.to_csv("movie_data.csv")
+    review_df.to_csv("reviews_data")
     
     
 main()
-        
-
-    
-    
