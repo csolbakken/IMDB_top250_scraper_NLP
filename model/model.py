@@ -26,7 +26,7 @@ def main():
         mapper = {1:"bad", 2:"bad", 3:"bad", 4:"bad", 5:"bad", 6:"good", 7:"good", 8:"good", 9:"good", 10:"good"}
         df["ratings"] = df["ratings"].replace(mapper)
 
-        X_train, X_test, y_train, y_test = train_test_split(df.drop(columns='ratings'),df['ratings'], test_size=0.2, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(df.drop(columns='ratings'),df['ratings'], test_size=0.15, random_state=42)
 
         return X_train, X_test, y_train, y_test
 
@@ -45,7 +45,7 @@ def main():
                         "classifier__C": [0.001, 0.01, 0.1, 1]}]
 
 
-        grid = GridSearchCV(pipe, param_grid, cv=10)
+        grid = GridSearchCV(pipe, param_grid, cv=10, scoring="f1")
         grid.fit(X_train.reviews, y_train)
 
         return grid

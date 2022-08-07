@@ -8,4 +8,10 @@ Using scikit-learn's TF-IDF vectorizer to perform sentiment analysis on the scra
 
 ## Results
 
+### Confusion Matrix
+The dataset is imbalanced in favor of positive reviews. As the scraper only gets the reviews from one single page, the distribution of available reviews is dependent on the length of each review string. This indicates that positive reviews in general are much shorter than negative ones. This results in the model is biased towards predicting positive reviews. 
+
 ![Confuson Matrix](model/ConfusionMatrix.png "Confusion Matrix")
+
+
+
