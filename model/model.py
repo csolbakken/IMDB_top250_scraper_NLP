@@ -40,7 +40,7 @@ def main():
 
         param_grid = [
                       {"classifier": [MultinomialNB()],
-                      "tokenizer__ngram_range": [(1, 1), (1, 2), (1, 3)]},
+                      "tokenizer__ngram_range": [(1, 1)]},
                       {"classifier": [LogisticRegression(solver="liblinear")],
                        "tokenizer__ngram_range": [(1, 1), (1, 2), (1, 3)],
                         "classifier__C": [0.001, 0.01, 0.1, 1]}]
@@ -55,12 +55,11 @@ def main():
     model = gridsearch(X_train, X_test, y_train, y_test)
     
     ## Save the model
-    joblib.dump(model, 'model.pkl')
+    joblib.dump(model, 'model/model.pkl')
 
     
 
 main()
-        
         
         
 
