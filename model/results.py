@@ -27,8 +27,9 @@ def main():
         ax.set_xlabel('Predicted Value')
         ax.set_ylabel('True Value');
 
-        ax.xaxis.set_ticklabels(['False','True'])
-        ax.yaxis.set_ticklabels(['False','True'])
+        ax.xaxis.set_ticklabels(['Bad','Good'])
+        ax.yaxis.set_ticklabels(['Bad','Good'])
+
 
         plt.savefig('model/ConfusionMatrix.png')
 
