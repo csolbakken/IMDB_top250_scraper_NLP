@@ -15,10 +15,10 @@ Accuracy for good reviews = 3984 / 4439 = 0.89
 
 ![Confuson Matrix](results/ConfusionMatrix.png "Confusion Matrix")
 
-## Upcoming features
+## Work in progress
 <ul> 
     <li> Case study of one false positive and one false negative to understand better what confuses the model </li>
     <li> Deploy the model as a web app with Django </li>
-</ul>
+    <li> Rest API for ratings and reviews for IMDB top 250 </li>
 
 
