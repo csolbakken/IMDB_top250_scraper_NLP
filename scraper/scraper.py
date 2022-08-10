@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 
-def main():
+def scraper_():
     
     ## Get IMDB 250 urls
     def get_urls():
@@ -64,4 +64,4 @@ def main():
     review_df.to_csv("data/reviews_data.csv")
     
     
-main()
+scraper_()

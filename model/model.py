@@ -17,7 +17,7 @@ import joblib
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
-def main():
+def model_():
     def loading_preprocessing():
         df = pd.read_csv("data/reviews_data.csv")
         df.set_index("index", inplace=True)
@@ -33,16 +33,16 @@ def main():
 
     def gridsearch(X_train, y_train):
         pipe = Pipeline ([ ('tokenizer', TfidfVectorizer()),
-                             ('classifier',  LogisticRegression(solver='liblinear'))
+                             ('classifier',  LogisticRegression(solver='saga'))
                           ] )
 
 
         param_grid = [
                       {"classifier": [MultinomialNB()],
-                      "tokenizer__ngram_range": [(1, 1)]},
-                      {"classifier": [LogisticRegression(solver="liblinear")],
-                       "tokenizer__ngram_range": [(1, 1), (1, 2), (1, 3)],
-                        "classifier__C": [0.001, 0.01, 0.1, 1]}]
+                      "tokenizer__ngram_range": [(1, 1), (1,2)]},
+                      {"classifier": [LogisticRegression(solver="saga")],
+                       "tokenizer__ngram_range": [(1, 1), (1, 2)],
+                        "classifier__C": [0.01, 0.1, 1]}]
 
 
         grid = GridSearchCV(pipe, param_grid, cv=10)
@@ -61,7 +61,7 @@ def main():
     y_test.to_csv("data/y_test.csv")
  
 
-main()
+model_()
         
         
 
