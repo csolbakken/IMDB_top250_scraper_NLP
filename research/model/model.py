@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 def model_():
     def loading_preprocessing():
-        df = pd.read_csv("data/reviews_data.csv")
+        df = pd.read_csv("research/data/reviews_data.csv")
         df.set_index("index", inplace=True)
         df.drop(columns=["Unnamed: 0"], inplace=True)
 
@@ -57,8 +57,8 @@ def model_():
     joblib.dump(model, 'model/model.pkl')
 
     ## Save the testing set
-    X_test.to_csv("data/X_test.csv")
-    y_test.to_csv("data/y_test.csv")
+    X_test.to_csv("research/data/X_test.csv")
+    y_test.to_csv("research/data/y_test.csv")
  
 
 model_()

@@ -10,9 +10,9 @@ def results_():
 
     ## Prediction
     def predict():
-        model = joblib.load('model/model.pkl')
-        X_test = pd.read_csv('data/X_test.csv')
-        y_test = pd.read_csv('data/y_test.csv')
+        model = joblib.load('research/model/model.pkl')
+        X_test = pd.read_csv('research/data/X_test.csv')
+        y_test = pd.read_csv('research/data/y_test.csv')
         y_pred = model.predict(X_test.reviews)
         return y_test.ratings, y_pred
 
@@ -30,7 +30,7 @@ def results_():
         ax.yaxis.set_ticklabels(['Bad','Good'])
 
 
-        plt.savefig('results/ConfusionMatrix.png')
+        plt.savefig('research/results/ConfusionMatrix.png')
 
     y_test, y_pred = predict()
     get_cm(y_test, y_pred)

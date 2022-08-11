@@ -61,7 +61,7 @@ def scraper_():
     urls = get_urls()
     review_df = get_reviews(urls)
     
-    review_df.to_csv("data/reviews_data.csv")
+    review_df.to_csv("research/data/reviews_data.csv")
     
     
 scraper_()
