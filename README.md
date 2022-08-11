@@ -13,7 +13,7 @@ The dataset is imbalanced in favor of positive reviews. As the scraper only gets
 Accuracy for bad reviews = 1840 / 2520 = 0.73 <br>
 Accuracy for good reviews = 3984 / 4439 = 0.89
 
-![Confuson Matrix](results/ConfusionMatrix.png "Confusion Matrix")
+![Confuson Matrix](/research/results/ConfusionMatrix.png "Confusion Matrix")
 
 ## Work in progress
 <ul> 
