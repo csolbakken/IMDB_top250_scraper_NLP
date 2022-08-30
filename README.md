@@ -1,13 +1,13 @@
-# IMDB scraper and sentiment analysis web application in Django
+# IMDB review classifier
 
 ## Web scraper
-Using Requests, BeautifulSoup, RegEx and Pandas to extract movie data and user reviews from IMDB's top 250 movies.
+Using Requests, BeautifulSoup and Pandas to extract movie data and user reviews from IMDB's top 250 movies.
 
 ## Sentiment analysis
 Using scikit-learn's TF-IDF vectorizer to perform sentiment analysis on the scraped reviews. Hyperparameters tuned by cross validation with GridSearch. 
 
 ## Web app
-The user can write her own review and get the predicted results from the model. 
+The user can write her own review and get the predicted results from the model. Backend developed in Django
 
 ## Results
 The dataset is imbalanced in favor of positive reviews. As the scraper only gets the reviews from one single page, the distribution of available reviews is dependent on the length of each review string. This indicates that positive reviews in general are much shorter than negative ones. This results in the model is biased towards predicting positive reviews:
