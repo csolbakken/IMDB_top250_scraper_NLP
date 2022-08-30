@@ -1,4 +1,4 @@
-# IMDB scraper and sentiment analysis web application
+# IMDB scraper and sentiment analysis web application in Django
 
 ## Web scraper
 Using Requests, BeautifulSoup, RegEx and Pandas to extract movie data and user reviews from IMDB's top 250 movies.
