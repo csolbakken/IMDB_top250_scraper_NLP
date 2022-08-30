@@ -1,3 +1,33 @@
-h1 {
-    font-size: 100px;
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
 }
+
+.think {
+    width: 550px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+
+
+textarea {
+
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 10px 0;
+
+}
+
+button {
+    margin: 30px;
+    border-radius: 8px;
+    border-width: 1px;
+
+    margin: 10px;
+    height: 30px;
+}
+

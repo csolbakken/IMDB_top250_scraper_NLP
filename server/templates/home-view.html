@@ -14,9 +14,25 @@
 </head>
 <body>
     <h1>Movie review sentiment analysis</h1>
-    <form action="/prediction/", method="GET">
-        <input type="text", name="q">
-        <button type="submit">submit</button>
+    <div class="think">
+        <p> 
+            Think of a movie you know well. Whether you liked it or not is not important, as long as it's one or the other. Now imagine you're a film critic. Your job is to get paid to explain others whether they should watch this movie or not. Pretty sweet, right? Now write a movie review in the box below.
+        </p> 
+        <br>
+        <p>
+            Feeling lazy? Click the button below to load a random film review
+        </p>
+    </div>
+
+
+    <form action="/prediction/", method="GET" class="form">    
+        <div class="input_field">
+            <textarea type="text", name="q" placeholder="Write your review here..." rows="20" cols="35"></textarea>
+        </div>
+
+        <div class="submit_button">
+            <button type="submit">predict</button>
+        </div>
 
     </form>
 </body>
