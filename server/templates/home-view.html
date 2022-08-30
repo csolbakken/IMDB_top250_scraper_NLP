@@ -1,6 +1,13 @@
 {% load static %}
 
+<script>
+    function populate_field() {
+    var text = "{{ review.review }}"
+    document.getElementById("input").value = text
+    console.log("Hello")
+}
 
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,10 +31,19 @@
         </p>
     </div>
 
+    <div>
+        <button onclick="populate_field()">Yeah, I'm lazy.</button>
+
+    </div>
+
+    <div>
+
+    </div>
+
 
     <form action="/prediction/", method="GET" class="form">    
         <div class="input_field">
-            <textarea type="text", name="q" placeholder="Write your review here..." rows="20" cols="35"></textarea>
+            <textarea type="text", name="q" placeholder="Write your review here..." rows="20" cols="35" id="input"></textarea>
         </div>
 
         <div class="submit_button">
@@ -36,4 +52,6 @@
 
     </form>
 </body>
+
+
 </html>
