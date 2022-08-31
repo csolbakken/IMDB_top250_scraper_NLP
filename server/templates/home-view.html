@@ -1,13 +1,6 @@
 {% load static %}
 
-<script>
-    function populate_field() {
-    var text = "{{ review.review }}"
-    document.getElementById("input").value = text
-    console.log("Hello")
-}
 
-</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,22 +10,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Rubik+Maze">
+    <script>
+
+        function populate_field() {
+            var random_review = "{{ review.review }}"
+    
+            function decode_html(text) {
+                var textArea = document.createElement('textarea');
+                textArea.innerHTML = text
+                return textArea.value
+            }
+    
+            decoded_review = decode_html(random_review)
+            document.getElementById("input").value = decoded_review
+        }
+    
+    </script>
 
 </head>
 <body>
-    <h1>Movie review sentiment analysis</h1>
-    <div class="think">
-        <p> 
-            Think of a movie you know well. Whether you liked it or not is not important, as long as it's one or the other. Now imagine you're a film critic. Your job is to get paid to explain others whether they should watch this movie or not. Pretty sweet, right? Now write a movie review in the box below.
-        </p> 
-        <br>
-        <p>
-            Feeling lazy? Click the button below to load a random film review
-        </p>
+    <header>
+        <h1>Movie Review Classifier</h1>
+        <p class="h2">Sentiment analysis in practice</p>
+        <hr>
+        <div class="think">
+            <img src="{% static 'icon.png' %}" alt="" class="pic">
+            <p> 
+                Think of a movie you know well. Whether you liked it or not is not important, as long as it's one or the other. Now imagine you're a film critic. Your job is to get paid to explain others whether they should watch this movie or not. Pretty sweet, right? Now write a movie review in the box below.
+            </p> 
+        </div>
+    </header>
+    <div class="lazy">
+        <p>Feeling lazy? Click the button below to fill in a random review from our database:</p>
     </div>
 
     <div>
-        <button onclick="populate_field()">Yeah, I'm lazy.</button>
+        <button class="lazy_button"onclick="populate_field()">Yeah, I'm lazy.</button>
 
     </div>
 
@@ -46,7 +60,7 @@
             <textarea type="text", name="q" placeholder="Write your review here..." rows="20" cols="35" id="input"></textarea>
         </div>
 
-        <div class="submit_button">
+        <div class="predict_button">
             <button type="submit">predict</button>
         </div>
 
