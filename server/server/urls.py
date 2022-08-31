@@ -5,6 +5,6 @@ from prediction import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", home_view),
+    path("", home_view, name='home'),
     path("prediction/", views.prediction_view)
 ]

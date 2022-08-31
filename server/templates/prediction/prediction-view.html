@@ -10,14 +10,20 @@
     <link rel="stylesheet" href="{% static 'prediction/style.css' %}">
 </head>
 <body>
-    <div class="prediction_result">
-        <h1>Prediction</h1>
-
-        <p> We believe you gave this movie a {{y_pred}} review.</p>
-    </div>
+    <header>
+        <a href="{% url 'home'%}"><h1>Movie Review Classifier</h1></a>
+        <p class="h2">Sentiment analysis in practice</p>
+        <hr>
+        <div class="prediction">
+            <img src="{% static 'icon.png' %}" alt="" class="pic">
+            <p> 
+                We believe you gave this movie a {{y_pred}} review    
+            </p> 
+        </div>
+    </header>
     <div>
         <p>So what really happened here?</p>
-        <p>A series of complicated processes </p>
+        <p>A series of complicated processes lies behind this process. First off, thousands of reviews were "scraped" from The International Movie Database's websites. </p>
 
     </div>
 

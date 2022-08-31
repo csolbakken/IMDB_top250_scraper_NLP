@@ -1,3 +1,28 @@
-* { 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+* {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: -10px;
+}
+
+.pic {
+    height: 100px;
+}
+
+.prediction {
+    width: 550px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+a:visited, a:link {
+    text-decoration:none;
+    color: black;
 }

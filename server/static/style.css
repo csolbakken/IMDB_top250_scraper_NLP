@@ -5,10 +5,19 @@
     font-family: Arial, Helvetica, sans-serif
 }
 
+
+
 h1 {
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: -10px;
+}
+
+
+
+a:link, a:visited{
+    text-decoration:none;
+    color: black;
 }
 
 .pic {
@@ -24,7 +33,7 @@ h1 {
 
 .lazy {
     font-size: 12px;
-    margin-bottom: -10px;
+    margin-top: -30px;
 }
 
 textarea {
@@ -41,6 +50,11 @@ textarea {
     border-width: 1px;
     margin: 10px;
     height: 30px;
+    width: 200px;
+    background-color:rgb(255, 219, 219);
+    cursor: pointer;
+    font-weight: bold;
+
 }
 
 .lazy_button {
@@ -49,6 +63,10 @@ textarea {
     height: 20px;
     font-size: 10px;
     margin:10px;
+    background-color: rgb(255, 219, 219);
+    cursor: pointer;
+    font-weight: bold;
+
 
 }
 

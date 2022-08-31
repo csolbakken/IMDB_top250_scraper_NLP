@@ -31,7 +31,7 @@
 </head>
 <body>
     <header>
-        <h1>Movie Review Classifier</h1>
+        <a href="{% url 'home' %}"><h1>Movie Review Classifier</h1></a>
         <p class="h2">Sentiment analysis in practice</p>
         <hr>
         <div class="think">
@@ -44,11 +44,10 @@
     <div class="lazy">
         <p>Feeling lazy? Click the button below to fill in a random review from our database:</p>
     </div>
-
     <div>
-        <button class="lazy_button"onclick="populate_field()">Yeah, I'm lazy.</button>
+        <button class="lazy_button"onclick="populate_field()" type="button">Yeah, I'm lazy.</button>
 
-    </div>
+    </div>      
 
     <div>
 
@@ -57,11 +56,11 @@
 
     <form action="/prediction/", method="GET" class="form">    
         <div class="input_field">
-            <textarea type="text", name="q" placeholder="Write your review here..." rows="20" cols="35" id="input"></textarea>
+            <textarea type="text", name="q" placeholder="Write your review here..." rows="5" cols="90" id="input" required></textarea>
         </div>
 
-        <div class="predict_button">
-            <button type="submit">predict</button>
+        <div>
+            <button  class="predict_button" type="submit">PREDICT</button>
         </div>
 
     </form>
